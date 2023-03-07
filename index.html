@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Introdução ao Box Model</title>
+</head>
+<body>
+    <h1>Box model</h1>
+
+    <p>Box Model é importante nos layouts de sites web, ele facilita a aplicação do CSS.</p>
+
+    <h2>O que o Box Model</h2>
+    <ul>
+        <li>É Cada elemento reprensentado como uma caixa retangular.</li>
+
+        <li>É uma caixa que possui duas dimensões (Largura e Altura).</li>
+    </ul>
+
+    <h2>Propriedades da caixa</h2>
+    <ul>
+        <li>Tamanho (Largura x altura) width x height</li>
+        <li>Conteúdo / content</li>
+        <li>Preenchimento interno / padding</li>
+        <li>Bordas / Bordes</li>
+        <li>Espaços fora da caixa / Margin</li>
+    </ul>
+
+    <img src="Captura de tela 2023-03-01 161751.png" alt="code 1">
+
+    <h2>Margin</h2>
+
+    <p>Margin, é o espaço (margem entre os elementos)</p>
+    <ul>
+        <li>Podemos dividir ela em quatro valores <div><img src="Captura de tela 2023-03-01 162438.png" alt="code 2"></div></li>
+
+        <li><strong>Values</strong>: <code>&lt;lenght&gt;, &lt;percentage&gt; e auto</code>. Geralmente usamos uma forma abreviada shorthand para descrever o margin. Esse formato segue o sentido horário começando pelo top, depois right, bottom e left. <div><img src="Captura de tela 2023-03-01 162510.png" alt="code 3"></div></li>
+
+        <li>O margin é aplicado em elementos com display block.</li>
+
+        <li>Cuidado com o margin collapsing que é quando o top se junta ao bottom.</li>
+    </ul>
+
+    <h2>Padding</h2>
+    <p>O padding é o preenchimento interno da caixa.</p>
+
+    <ul>
+        <li>A propriedade padding pode ser escrita como nos formatos apresentados abaixo:
+        <div><img src="Captura de tela 2023-03-01 163431.png" alt="code 4"></div></li>
+        
+        <li>Geralmente usamos a forma abreviada (shorthand para escrever o padding). Ele segue no sentido horário, começando pelo top, depois right, bottom e left. <div><img src="Captura de tela 2023-03-01 163904.png" alt="code 5"></div></li>
+
+        <li>O padding pode ter valores de comprimento (rem, em, px) ou porcentagem (%).</li>
+
+        <li>O padding poderá causar diferença na largura de um elemento.</li>
+    </ul>
+
+    <h2>Box Sizing</h2>
+
+    <p>O navegador não define o tamanho dos elementos de forma muito conveniente, mas nós podemos sobscrever esse comportamento com a propriedade box-sizing.</p>
+ 
+    <div><img src="Captura de tela 2023-03-02 160129.png" alt="code 6"></div>
+    <div class="box"><p>Conteúdo</p></div>
+
+    <p>Essa propriedade faz faz o navegador respeitar as medidas especificadas do widht e height do nosso elemento</p>
+
+    <h3>Dica!</h3>
+
+    <p>Como é muito útil trabalhar como o box-sizing usando o valor border-box é uma boa prática aplicá-lo na página toda.</p>
+
+    <div><img src="Captura de tela 2023-03-02 160902.png" alt="Code 7"></div>
+
+    <p>Agora todos os elementos da página irão respeitar os tamanhos especificados.</p>
+
+    <h2>Display-block-inline</h2>
+
+    <h3>Display: block; VS Display: inline;</h3>
+
+    <ul>
+        <li>Como as caixas se comportam em relação as outras caixas</li>
+
+        <li>Comportamento externo das caixas</li>
+    </ul>
+
+    <h2>Display block</h2>
+
+    <ul>
+        <li>Ocupa toda, linha colocando o próximo elemento abaixo desse </li>
+
+        <li>widht e height são respeitadas</li>
+
+        <li>padding, margin, border irão funcionar normalmente</li>
+    </ul>
+
+    <h2>Display inline</h2>
+
+    <ul>
+        <li>Os elementos ficam ao lado do outro e não empurram outros elementos para baixo</li>
+        <li>widht e height não funcionam</li>
+        <li>somente valores horizontais de margin</li>
+    </ul>
+
+    <section id="boxDivs">
+        <div class="box1"><p>olá</p>
+        <p>sou um display: inline</p></div>
+
+        <div class="box2"><p>olá</p>
+        <p>sou uma div normal</p></div>
+
+        <div class="box3"><p>olá</p>
+        <p>sou um inline-block</p></div>
+
+        <div class="box4"><p>olá</p>
+        <p>sou um inline-block</p></div>
+    </section>
+
+    <section id="boxSpan">
+        <span class="box5"><p>olá</p>
+        <p>sou um display block</p></span>
+
+        <span class="box6"><p>olá</p>
+        <p>sou um span</p></span>
+
+        <span class="box7"><p>olá</p>
+        <p>sou um display inline-block</p></span>
+
+        <span class="box8"><p>olá</p>
+        <p>sou um display inline-block</p></span>
+    </section>
+</body>
+</html>
